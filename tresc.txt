@@ -1,0 +1,6 @@
+== Wejście ==
+W pierwszej linii wejscia znajduje się jedna liczba naturalna n (0 < n < 1 000 000)
+W kolejnej linii znajduje się n liczb naturalnych a[i] (1 < a[i] < 1 000 000)
+
+== Wyjście ==
+Wyjście powinno zawierać n wierszy. W i-tym wierszu powinno znaleźć się słowo "TAK", jeżeli liczba a[i] jest pierwsza lub "NIE", jeżeli jest złożona.
