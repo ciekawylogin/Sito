@@ -17,16 +17,25 @@ int main() {
   int tablica2[n+1];
   for(int i=0;i<n;i++){
       cin>>tablica[i];
+      tablica2[i]=tablica[i];
 
   }
-  for(int i=0;i<n;i++){
-      for(int j=2;j*j<=n;j++){
-          if(tablica[i]==j)
-              tablica2[i]=1;
-          if(tablica[i]%j==0)
+  for(int j=2;j*j<=n;j++){
+      for(int i=0;i<n+1;i++){
+          if(tablica2[i]==0)
               tablica2[i]=0;
           else
-              tablica2[i]=1;
+              if(tablica2[i]==1)
+                  tablica2[i]=1;
+          else
+                  if(tablica2[i]==j)
+                      tablica2[i]=1;
+          else
+                      if(tablica2[i]%j==0)
+                          tablica2[i]=0;
+          else
+                              tablica2[i]=1;
+
       }
 
   }
