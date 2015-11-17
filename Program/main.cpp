@@ -14,15 +14,19 @@ int main() {
   int n;
   cin >> n;
   int tablica[n+1];
+  int tablica2[n+1];
   for(int i=0;i<n;i++){
       cin>>tablica[i];
+
+  }
+  for(int i=0;i<n;i++){
       for(int j=2;j*j<=n;j++){
           if(tablica[i]%j==0)
-              tablica[i]=0;
+              tablica2[i]=0;
           else
-              tablica[i]=1;
-
+              tablica2[i]=1;
       }
+
   }
 
   for(int i=0;i<n;i++){
