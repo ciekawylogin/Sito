@@ -20,7 +20,7 @@ int main() {
       tablica2[i]=tablica[i];
 
   }
-  for(int j=2;j*j<=n;j++){
+  for(int j=2;j*j<=tablica[n];j++){
       for(int i=0;i<n+1;i++){
           if(tablica2[i]==0)
               tablica2[i]=0;
@@ -28,10 +28,10 @@ int main() {
               if(tablica2[i]==1)
                   tablica2[i]=1;
           else
-                  if(tablica2[i]==j)
+                  if(tablica[i]==j)
                       tablica2[i]=1;
           else
-                      if(tablica2[i]%j==0)
+                      if(tablica[i]%j==0)
                           tablica2[i]=0;
           else
                               tablica2[i]=1;
