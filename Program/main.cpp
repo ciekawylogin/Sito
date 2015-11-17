@@ -21,6 +21,8 @@ int main() {
   }
   for(int i=0;i<n;i++){
       for(int j=2;j*j<=n;j++){
+          if(tablica[i]==j)
+              tablica2[i]=1;
           if(tablica[i]%j==0)
               tablica2[i]=0;
           else
@@ -30,9 +32,9 @@ int main() {
   }
 
   for(int i=0;i<n;i++){
-      if(tablica[i]==0)
+      if(tablica2[i]==0)
           cout<<"Nie"<<endl;
-      if(tablica[i]==1)
+      if(tablica2[i]==1)
           cout<<"Tak"<<endl;
   }
 
