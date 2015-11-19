@@ -4,6 +4,10 @@
 using namespace std;
 
 
+const int k=1000000;
+long long liczby_pierwsze[k+1];
+long long liczby_pierwsze2[k+1];
+int tablica[k+1];
 
 int main() {
   clock_t begin = clock();
@@ -11,9 +15,6 @@ int main() {
   /// poczatek programu
 
 
-  long long k=1000000;
-  long long liczby_pierwsze[k+1];
-  long long liczby_pierwsze2[k+1];
   for(int l=0;l<k;l++){
       liczby_pierwsze[l]=l;
       liczby_pierwsze2[l]=l;
@@ -41,7 +42,6 @@ int main() {
   }
   int n;
   cin >> n;
-  int tablica[n+1];
   for(int m=0;m<n;m++){
       cin>>tablica[m];
   }
