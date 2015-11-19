@@ -10,43 +10,34 @@ int main() {
 
   /// poczatek programu
 
-
-  int n;
-  cin >> n;
-  int tablica[n+1];
-  int tablica2[n+1];
-  for(int i=0;i<n;i++){
-      cin>>tablica[i];
-      tablica2[i]=tablica[i];
-
+  long long k=100000;
+  long long liczby_pierwsze[k+1];
+  long long liczby_pierwsze2[k+1];
+  for(int l=0;l<k;l++){
+      liczby_pierwsze[l]=l;
+      liczby_pierwsze2[l]=l;
   }
-  for(int j=2;j*j<=tablica[n];j++){
-      for(int i=0;i<n+1;i++){
-          if(tablica2[i]==0)
-              tablica2[i]=0;
+  for(int j=2;j*j<=k;j++){
+      for(int i=0;i<k;i++){
+          if(liczby_pierwsze2[i]==0)
+              liczby_pierwsze2[i]=0;
           else
-              if(tablica2[i]==1)
-                  tablica2[i]=1;
+              if(liczby_pierwsze2[i]==1)
+                  liczby_pierwsze2[i]=1;
           else
-                  if(tablica[i]==j)
-                      tablica2[i]=1;
+                  if(liczby_pierwsze[i]==j)
+                      liczby_pierwsze2[i]=1;
           else
-                      if(tablica[i]%j==0)
-                          tablica2[i]=0;
+                      if(liczby_pierwsze2[i]%j==0)
+                          liczby_pierwsze[i]=0;
           else
-                              tablica2[i]=1;
-
+                              liczby_pierwsze2[i]=liczby_pierwsze[i];
       }
-
   }
-
-  for(int i=0;i<n;i++){
-      if(tablica2[i]==0)
-          cout<<"Nie"<<endl;
-      if(tablica2[i]==1)
-          cout<<"Tak"<<endl;
+  for(int i=0;i<k;i++){
+      if(liczby_pierwsze2[i]==1)
+          cout<<liczby_pierwsze[i]<<endl;
   }
-
   /// koniec programu
 
   clock_t end = clock();
@@ -54,3 +45,4 @@ int main() {
 
   cout << "czas dzialania: " << elapsed_secs << " sekund." << endl;
 }
+
