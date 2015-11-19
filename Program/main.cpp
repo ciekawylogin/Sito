@@ -11,7 +11,7 @@ int main() {
   /// poczatek programu
 
 
-  long long k=100000;
+  long long k=1000000;
   long long liczby_pierwsze[k+1];
   long long liczby_pierwsze2[k+1];
   for(int l=0;l<k;l++){
