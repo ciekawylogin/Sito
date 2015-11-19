@@ -35,8 +35,12 @@ int main() {
       }
   }
   for(int i=0;i<k;i++){
+  if(liczby_pierwsze2[i]>1)
+      liczby_pierwsze2[i]=1;
+  }
+  for(int i=0;i<k;i++){
       if(liczby_pierwsze2[i]==1)
-          cout<<liczby_pierwsze[i]<<endl;
+          cout<<liczby_pierwsze[i]<<",";
   }
   /// koniec programu
 
