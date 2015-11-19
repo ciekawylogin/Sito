@@ -10,6 +10,7 @@ int main() {
 
   /// poczatek programu
 
+
   long long k=100000;
   long long liczby_pierwsze[k+1];
   long long liczby_pierwsze2[k+1];
@@ -38,10 +39,19 @@ int main() {
   if(liczby_pierwsze2[i]>1)
       liczby_pierwsze2[i]=1;
   }
-  for(int i=0;i<k;i++){
-      if(liczby_pierwsze2[i]==1)
-          cout<<liczby_pierwsze[i]<<",";
+  int n;
+  cin >> n;
+  int tablica[n+1];
+  for(int m=0;m<n;m++){
+      cin>>tablica[m];
   }
+  for(int m=0;m<n;m++){
+      if(liczby_pierwsze2[tablica[m]]==1)
+          cout<<"Tak"<<endl;
+      else
+          cout<<"Nie"<<endl;
+  }
+
   /// koniec programu
 
   clock_t end = clock();
