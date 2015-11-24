@@ -14,6 +14,11 @@ int main() {
 
   /// poczatek programu
 
+  int n;
+  cin >> n;
+  for(int m=0;m<n;m++){
+      cin>>tablica[m];
+  }
 
   for(int l=0;l<k;l++){
       liczby_pierwsze[l]=l;
@@ -30,8 +35,8 @@ int main() {
                   if(liczby_pierwsze[i]==j)
                       liczby_pierwsze2[i]=1;
           else
-                      if(liczby_pierwsze2[i]%j==0)
-                          liczby_pierwsze[i]=0;
+                      if(liczby_pierwsze[i]%j==0)
+                          liczby_pierwsze2[i]=0;
           else
                               liczby_pierwsze2[i]=liczby_pierwsze[i];
       }
@@ -40,15 +45,11 @@ int main() {
   if(liczby_pierwsze2[i]>1)
       liczby_pierwsze2[i]=1;
   }
-  int n;
-  cin >> n;
-  for(int m=0;m<n;m++){
-      cin>>tablica[m];
-  }
+
   for(int m=0;m<n;m++){
       if(liczby_pierwsze2[tablica[m]]==1)
           cout<<"Tak"<<endl;
-      else
+      if(liczby_pierwsze2[tablica[m]]==0)
           cout<<"Nie"<<endl;
   }
 
