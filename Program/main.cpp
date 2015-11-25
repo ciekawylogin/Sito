@@ -5,7 +5,6 @@ using namespace std;
 
 
 const int k=1000000;
-long long liczby_pierwsze[k+1];
 long long liczby_pierwsze2[k+1];
 int tablica[k+1];
 
@@ -21,7 +20,6 @@ int main() {
   }
 
   for(int l=0;l<k;l++){
-      liczby_pierwsze[l]=l;
       liczby_pierwsze2[l]=l;
   }
   for(int j=2;j*j<=k;j++){
@@ -32,13 +30,13 @@ int main() {
               if(liczby_pierwsze2[i]==1)
                   liczby_pierwsze2[i]=1;
           else
-                  if(liczby_pierwsze[i]==j)
+                  if(i==j)
                       liczby_pierwsze2[i]=1;
           else
-                      if(liczby_pierwsze[i]%j==0)
+                      if(i%j==0)
                           liczby_pierwsze2[i]=0;
           else
-                              liczby_pierwsze2[i]=liczby_pierwsze[i];
+                              liczby_pierwsze2[i]=i;
       }
   }
   for(int i=0;i<k;i++){
